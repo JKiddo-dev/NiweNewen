@@ -14,7 +14,7 @@ export const ServiceCard = ({title, description, imageSrc}: ServiceCardProps) =>
         <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' />
       </div>
       <h2 className='text-2xl font-bold mb-2'>{title}</h2>
-      <p className='text-gray-600'>{description}</p>
+      <p className='text-[#78288c]'>{description}</p>
     </div>
   )
 }
