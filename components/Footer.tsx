@@ -1,19 +1,30 @@
 import React from 'react';
+import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F2EBDF] text-black py-8">
+    <footer className="bg-[#F3EDDD] text-[#002315] py-8">
       <div className="container mx-auto flex flex-wrap justify-around">
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h4 className="text-lg font-bold mb-4">Contacto</h4>
-          <p>Dirección: San Pedro de Melipilla</p>
-          <p>Teléfono: +56 9 1234 5678</p>
-          <p>Email: contacto@niwenewen.cl</p>
+          <p className="flex items-center">
+            <FaMapMarkerAlt className="mr-2" /> San Pedro de Melipilla
+          </p>
+          <p className="flex items-center">
+            <FaPhoneAlt className="mr-2" /> +56 9 1234 5678
+          </p>
+          <p className="flex items-center">
+            <FaEnvelope className="mr-2" /> contacto@niwenewen.cl
+          </p>
         </div>
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h4 className="text-lg font-bold mb-4">Síguenos</h4>
-          <a href="https://instagram.com/niwenewen" target="_blank" rel="noopener noreferrer" className="block hover:underline">Instagram</a>
-          <a href="https://facebook.com/niwenewen" target="_blank" rel="noopener noreferrer" className="block hover:underline">Facebook</a>
+          <a href="https://instagram.com/niwenewen" target="_blank" rel="noopener noreferrer" className="block hover:underline flex items-center">
+            <FaInstagram className="mr-2" /> Instagram
+          </a>
+          <a href="https://facebook.com/niwenewen" target="_blank" rel="noopener noreferrer" className="block hover:underline flex items-center">
+            <FaFacebook className="mr-2" /> Facebook
+          </a>
         </div>
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h4 className="text-lg font-bold mb-4">Enlaces Rápidos</h4>
