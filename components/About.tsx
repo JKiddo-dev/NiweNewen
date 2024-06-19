@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const About = () => {
   return (
-    <div id='about-section' className='w-full bg-white text-[#293a8a] py-16 px-4'>
+    <div id='about-section' className='w-full bg-[#F2EBDF] text-[#293a8a] py-16 px-4'>
         <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
             <Image
             src="/logooficial.jpeg"
