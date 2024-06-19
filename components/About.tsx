@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export const About = () => {
   return (
-    <div id='about-section' className='w-full bg-white text-[#78e047] py-16 px-4'>
+    <div id='about-section' className='w-full bg-white text-[#293a8a] py-16 px-4'>
         <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
             <Image
-            src="/Logo2.png"
+            src="/logooficial.jpeg"
             alt="logo"
             width={250}
             height={250}
