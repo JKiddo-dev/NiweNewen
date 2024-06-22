@@ -14,13 +14,15 @@ export const About = () => {
         </div>
         <div className='flex flex-col justify-center'>
           <p className='font-bold'>SOBRE NOSOTROS</p>
-          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Domo Natural NiweNewen</h1>
-          <p>
-          Niwe Newen, fundada por María Alejandra Villavicencio Lara en 2021, 
-          es un refugio dedicado a la salud y el bienestar. Ubicada en San Pedro
-           de Melipilla, ofrece servicios de yoga, masajes, terapias alternativas y 
-           actividades familiares en un entorno natural, promoviendo la relajación y 
-           el equilibrio.
+          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 font-serif' style={{ fontFamily: 'Dancing Script' }}>
+            Domo Natural NiweNewen
+          </h1>
+          <p className="font-serif" style={{ fontFamily: 'Dancing Script' }}>
+            Niwe Newen, fundada por María Alejandra Villavicencio Lara en 2021, 
+            es un refugio dedicado a la salud y el bienestar. Ubicada en San Pedro
+            de Melipilla, ofrece servicios de yoga, masajes, terapias alternativas y 
+            actividades familiares en un entorno natural, promoviendo la relajación y 
+            el equilibrio.
           </p>
         </div>
       </div>
