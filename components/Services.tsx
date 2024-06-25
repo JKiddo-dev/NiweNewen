@@ -3,9 +3,9 @@ import { ServiceCard } from './ServiceCard';
 import Image from 'next/image';
 
 const services = [
-    { id: 1, title: 'Estadía en Domo', description: 'Estadía en Domo.', imageSrc: '/next.svg' },
-    { id: 2, title: 'Reiki', description: 'Reiki/yoga.', imageSrc: '/next.svg' },
-    { id: 3, title: 'Medicina Alternativa', description: 'Medicina Alternativa / Flores de Bach', imageSrc: '/next.svg' },
+    { id: 1, title: 'Estadía en Domo', description: 'Estancias Para una inmersión completa en la naturaleza.', imageSrc: '/next.svg' },
+    { id: 2, title: 'Yoga y Meditación', description: 'Diferentes técnicas para la relajación y el alivio del estrés.', imageSrc: '/next.svg' },
+    { id: 3, title: 'Terapias Alternativas', description: 'Reiki online, tapping y matrix reimprinting', imageSrc: '/next.svg' },
   ];
 
 export const Services = () => {
