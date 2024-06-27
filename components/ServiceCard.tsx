@@ -14,7 +14,7 @@ export const ServiceCard = ({ title, description, imageSrc }: ServiceCardProps) 
         <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' />
       </div>
       <h2 className='text-2xl text-[#002315] font-bold mb-2 '>{title}</h2>
-      <p className='text-[#002315] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
+      <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
         {description}
       </p>
     </div>
