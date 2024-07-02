@@ -56,7 +56,7 @@ const Footer = () => {
             </a>
             <span className="hidden md:inline mx-2 h-6 border-l border-[#8C4C27]"></span>
             <a 
-              href="https://instagram.com/niwenewen" 
+              href="https://instagram.com/domoniwe" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center hover:underline mb-2 md:mb-0 md:mr-4"
