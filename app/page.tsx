@@ -8,11 +8,21 @@ import { StatisticsSection } from "@/components/StatisticsSection"
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <Services/>
-      <StatisticsSection/>
-      <ProductsSection/>
-      <About/>
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="statistics">
+        <StatisticsSection />
+      </div>
+      <div id="products">
+        <ProductsSection />
+      </div>
+      <div id="about">
+        <About />
+      </div>
     </>
-  )
+  );
 }

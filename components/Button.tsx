@@ -1,21 +1,24 @@
-import Image from "next/image";
-import { ReactElement } from "react";
+// src/components/Button.tsx
+import React from 'react';
 
 type ButtonProps = {
-    type: 'button' | 'submit'
-    title: string;
-    icon: any;
-}
+  type: "button" | "submit" | "reset";
+  title: string;
+  icon?: React.ReactNode;
+  onClick?: () => void;
+};
 
-const Button = ({type, title, icon}: ButtonProps) => {
+const Button = ({ type, title, icon, onClick }: ButtonProps) => {
   return (
-    <button type={type} className="flex items-center justify-center gap-2 rounded-3xl border bg-green-90 px-8 py-3 text-white">
-      {icon && <span className="icon">{icon}</span>}
-      <label className="bold-16 whitespace-nowrap">
-        {title}
-      </label>
+    <button
+      type={type}
+      onClick={onClick}
+      className="bg-[#84BF04] text-black flex items-center justify-center px-4 py-2 rounded"
+    >
+      {icon && <span className="mr-2">{icon}</span>}
+      {title}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

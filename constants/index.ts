@@ -1,8 +1,10 @@
-// NAVIGATION
+// src/constants/index.ts
+
 export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Inicio' },
-    { href: '/', key: 'faq', label: 'Quiénes somos' },
-    { href: '/', key: 'services', label: 'Servicios ' },
-    { href: '/', key: 'contact', label: 'Contacto' },
-  ];
-  
+  { key: 'home', label: 'Inicio', href: '/' },
+  { key: 'services', label: 'Servicios', href: '#services' },
+  { key: 'products', label: 'Productos', href: '#products' },
+  { key: 'about', label: 'Quiénes Somos', href: '#about' },
+  { key: 'contact', label: 'Contacto', href: '#contact' },
+  { key: 'schedule', label: 'Agendar', href: '#schedule' }
+];
