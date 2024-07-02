@@ -52,7 +52,7 @@ const Navbar = () => {
             <a
               href={link.href}
               onClick={(e) => link.label === 'Contacto' ? handleScroll(e, 'footer') : handleScroll(e, link.href.substring(1))}
-              className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#84BF04]"
+              className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#78288c]"
             >
               {link.label}
             </a>
@@ -78,7 +78,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={(e) => link.label === 'Contacto' ? handleScroll(e, 'footer') : handleScroll(e, link.href.substring(1))}
-                    className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#84BF04]"
+                    className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#78288c]"
                   >
                     {link.label}
                   </a>
