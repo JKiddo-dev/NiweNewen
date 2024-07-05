@@ -33,7 +33,7 @@ const AboutSection = () => {
             className="text-center w-full"
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold py-4 font-serif" style={{ fontFamily: "Dancing Script" }}>
-              SOBRE NOSOTROS
+              Sobre Nosotros
             </h2>
             <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
               Niwe Newen, fundada por María Alejandra Villavicencio Lara en 2021, es un refugio dedicado a la salud y el
