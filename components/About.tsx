@@ -32,11 +32,9 @@ const sections = [
 export const About = () => {
   return (
     <div className="w-screen text-white">
-      <div className="w-full px-4 md:px-8 lg:px-16 xl:px-32">
-        {sections.map((section) => (
-          <section.component key={section.id} />
-        ))}
-      </div>
+      {sections.map((section) => (
+        <section.component key={section.id} />
+      ))}
     </div>
   );
 };
