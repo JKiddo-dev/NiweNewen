@@ -35,7 +35,7 @@ const AboutVision = () => {
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold py-4 font-serif" style={{ fontFamily: "Dancing Script" }}>
               Visión Futura
             </h2>
-            <p className="font-serif text-justify text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
+            <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
               Nuestra visión es expandir nuestra presencia en línea para alcanzar a un público más amplio y
               diversificado. Queremos seguir mejorando nuestros servicios y proporcionar un refugio para aquellos que
               buscan un respiro del estrés cotidiano, convirtiéndonos en un oasis de paz y bienestar.

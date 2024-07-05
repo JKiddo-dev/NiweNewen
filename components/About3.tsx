@@ -35,7 +35,7 @@ const AboutHistory = () => {
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold py-4 font-serif" style={{ fontFamily: "Dancing Script" }}>
               Historia
             </h2>
-            <p className="font-serif text-justify text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
+            <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
               La organización Niwe Newen fue fundada el 29 de septiembre de 2021 por María Alejandra Villavicencio Lara,
               quien decidió dejar su trabajo como enfermera durante la pandemia de Covid-19 para mudarse a San Pedro de
               Melipilla en busca de un entorno más tranquilo. Inspirada por su formación y experiencia, María Alejandra

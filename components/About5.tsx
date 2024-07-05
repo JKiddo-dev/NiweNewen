@@ -35,7 +35,7 @@ const AboutApproach = () => {
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold py-4 font-serif" style={{ fontFamily: "Dancing Script" }}>
               Nuestro Enfoque
             </h2>
-            <p className="font-serif text-justify text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
+            <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
               En Niwe Newen, nos enfocamos en el bienestar integral, ofreciendo servicios que abarcan el cuerpo, el alma
               y el espíritu. Promovemos la relajación, la creatividad y el equilibrio en un entorno natural, permitiendo
               a nuestros visitantes sumergirse en el silencio y la belleza de un bosque exuberante.

@@ -35,7 +35,7 @@ const AboutMission = () => {
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold py-4 font-serif" style={{ fontFamily: "Dancing Script" }}>
               Misión
             </h2>
-            <p className="font-serif text-justify text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
+            <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
               Nuestra misión es proporcionar un espacio donde las personas puedan escapar del estrés de la ciudad y
               reconectarse con ellos mismos y la naturaleza.
             </p>
