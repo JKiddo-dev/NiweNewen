@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -6,41 +5,41 @@ import { NAV_LINKS } from "@/constants";
 import Button from "./Button";
 import { FaUserPlus } from "react-icons/fa6";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { useRouter } from "next/navigation";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const [isClient, setIsClient] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const handleScroll = (event: React.MouseEvent, id: string) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
+  const handleNavigation = (href: string) => {
+    const element = document.getElementById(href.substring(1));
     if (element) {
-      const yOffset = -80; // Ajusta este valor según la altura de tu navbar
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      setMenuOpen(false); // close menu on link click
-    }
-  };
+      const offset = 80; // Ajusta este valor al tamaño de tu Navbar si es fijo
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
 
-  const handleNavigation = (path: string) => {
-    router.push(path);
-    setMenuOpen(false); // close menu on button click
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
   };
 
   const scrollToTop = (event: React.MouseEvent) => {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    setMenuOpen(false); // close menu on logo click
+    setMenuOpen(false); // Cierra el menú al hacer clic en el logo
   };
 
   if (!isClient) {
-    return null; // or a loading spinner
+    return null; // O un spinner de carga
   }
 
   return (
@@ -49,15 +48,11 @@ const Navbar = () => {
         <img src="/logo png.png" alt="Logo" className="h-12" />
       </div>
       <ul className="lg:flex hidden h-full gap-12">
-        {NAV_LINKS.filter(link => link.label !== 'Inicio' && link.label !== 'Agendar').map((link) => (
+        {NAV_LINKS.map((link) => (
           <li key={link.key}>
-            <a
-              href={link.href}
-              onClick={(e) => link.label === 'Contacto' ? handleScroll(e, 'footer') : handleScroll(e, link.href.substring(1))}
-              className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#78288c]"
-            >
+            <NavLink href={link.href}>
               {link.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -66,7 +61,7 @@ const Navbar = () => {
           type="button"
           title="Agendar"
           icon={<FaUserPlus size={20} color="black" />}
-          onClick={() => handleNavigation('/agendar')}
+          onClick={() => handleNavigation('#schedule')}
         />
       </div>
       <div className="lg:hidden">
@@ -75,15 +70,11 @@ const Navbar = () => {
           <div className="bg-[#172601] p-6 rounded-lg w-11/12 max-w-md mx-auto text-center transition-transform duration-300 transform">
             <IoClose size={50} color="white" className="cursor-pointer mb-4" onClick={() => setMenuOpen(false)} />
             <ul className="flex flex-col gap-6 mb-6">
-              {NAV_LINKS.filter(link => link.label !== 'Inicio' && link.label !== 'Agendar').map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.key}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => link.label === 'Contacto' ? handleScroll(e, 'footer') : handleScroll(e, link.href.substring(1))}
-                    className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#78288c]"
-                  >
+                  <NavLink href={link.href}>
                     {link.label}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -92,7 +83,7 @@ const Navbar = () => {
                 type="button"
                 title="Agendar"
                 icon={<FaUserPlus size={20} color="black" />}
-                onClick={() => handleNavigation('/agendar')}
+                onClick={() => handleNavigation('#schedule')}
               />
             </div>
           </div>

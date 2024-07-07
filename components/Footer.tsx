@@ -6,7 +6,7 @@ const Footer = () => {
   const whatsappLink = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phoneNumber)}`;
 
   return (
-    <footer id="footer" className="bg-[#F3EDDD] text-[#002315] py-8" style={{ fontFamily: 'Dancing Script' }}>
+    <footer id="contact" className="bg-[#F3EDDD] text-[#002315] py-8" style={{ fontFamily: 'Dancing Script' }}>
       <div className="border-t-4 border-[#8C4C27] mb-8"></div>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 md:flex-grow text-center md:text-left">

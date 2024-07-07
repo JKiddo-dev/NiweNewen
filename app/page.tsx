@@ -4,6 +4,7 @@ import ProductsSection from "@/components/ProductsSection";
 import { Services } from "@/components/Services";
 import { StatisticsSection } from "@/components/StatisticsSection";
 import ScrollToTopButton from "@/components/ScrolltoTopButton";
+import Schedule from "@/components/Schedule"; // Importar el nuevo componente
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
       </div>
       <div id="about">
         <About />
+      </div>
+      <div id="schedule"> {/* Añadir la nueva sección */}
+        <Schedule />
       </div>
       <ScrollToTopButton />
     </>
