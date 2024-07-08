@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="flex items-center mb-2">
             <FaMapMarkerAlt className="mr-2" />
             <a 
-              href="https://www.google.com/maps/place/33°56'50.6%22S+71°33'31.3%22W/@-33.9474855,-71.5596454,18.71z/data=!4m4!3m3!8m2!3d-33.9474005!4d-71.5586979?entry=ttu" 
+              href="https://maps.app.goo.gl/xJniZ35Kd2nVMHG76" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:underline"
