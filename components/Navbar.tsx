@@ -47,7 +47,7 @@ const Navbar = () => {
       <div onClick={scrollToTop} className="cursor-pointer">
         <img src="/logo png.png" alt="Logo" className="h-12" />
       </div>
-      <ul className="lg:flex hidden h-full gap-12">
+      <ul className="lg:flex hidden h-full gap-12 text-white">
         {NAV_LINKS.map((link) => (
           <li key={link.key}>
             <NavLink href={link.href}>
@@ -65,14 +65,14 @@ const Navbar = () => {
         />
       </div>
       <div className="lg:hidden">
-        <IoMenu size={50} color="black" className="cursor-pointer" onClick={() => setMenuOpen(true)} />
-        <div className={`fixed inset-0 z-40 flex items-center justify-center bg-[#172601] bg-opacity-80 backdrop-blur-sm transition-opacity duration-300 transform ${menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-          <div className="bg-[#172601] p-6 rounded-lg w-11/12 max-w-md mx-auto text-center transition-transform duration-300 transform">
+        <IoMenu size={50} color="white" className="cursor-pointer" onClick={() => setMenuOpen(true)} />
+        <div className={`fixed inset-0 z-40 flex items-center justify-center bg-[#172601] bg-opacity-80 backdrop-blur-sm transition-all duration-300 transform ${menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+          <div className="bg-[#172601] p-6 rounded-lg w-11/12 max-w-md mx-auto text-center transition-all duration-300 transform ${menuOpen ? 'translate-y-0' : '-translate-y-full'}">
             <IoClose size={50} color="white" className="cursor-pointer mb-4" onClick={() => setMenuOpen(false)} />
-            <ul className="flex flex-col gap-6 mb-6">
+            <ul className="flex flex-col gap-6 mb-6 text-white">
               {NAV_LINKS.map((link) => (
                 <li key={link.key}>
-                  <NavLink href={link.href}>
+                  <NavLink href={link.href} onClick={() => setMenuOpen(false)}>
                     {link.label}
                   </NavLink>
                 </li>

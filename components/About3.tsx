@@ -36,9 +36,8 @@ const AboutHistory = () => {
               Historia
             </h2>
             <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
-              La organización Niwe Newen fue fundada el 29 de septiembre de 2021 por María Alejandra Villavicencio Lara,
-              quien decidió dejar su trabajo como enfermera durante la pandemia de Covid-19 para mudarse a San Pedro de
-              Melipilla en busca de un entorno más tranquilo. Inspirada por su formación y experiencia, María Alejandra
+              La organización Niwe Newen fue fundada en el 2021 por María Alejandra
+              en San Pedro de Melipilla. Inspirada por su formación y experiencia, María Alejandra
               creó Niwe Newen con el objetivo de promover la salud y el bienestar general.
             </p>
           </motion.div>

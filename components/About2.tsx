@@ -36,7 +36,7 @@ const AboutSection = () => {
               Sobre Nosotros
             </h2>
             <p className="font-serif text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-normal mt-8">
-              Niwe Newen, fundada por María Alejandra Villavicencio Lara en 2021, es un refugio dedicado a la salud y el
+              Niwe Newen, fundada por María Alejandra en 2021, es un refugio dedicado a la salud y el
               bienestar. Ubicada en San Pedro de Melipilla, ofrece un entorno natural perfecto para la relajación y el
               equilibrio.
             </p>

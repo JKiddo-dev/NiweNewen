@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -10,12 +10,12 @@ const Hero = () => {
     <section
       className='relative mx-auto max-w-[1920px] flex flex-col gap-20 py-20 lg:py-32 xl:flex-row overflow-hidden'
       style={{
-        minHeight: '80vh', // Adjust the minimum height to occupy 0% of the screen height
+        minHeight: '80vh', // Ajusta la altura mínima para ocupar el 80% de la altura de la pantalla
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className='absolute inset-0 w-full h-full'>
+      <div className='absolute inset-0 w-full h-full bg-black'>
         <Image
           src='/fondo domo.jpg'
           alt='Background Image'
@@ -23,6 +23,7 @@ const Hero = () => {
           objectFit='cover'
           quality={100}
           className={`transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-60'}`}
+          style={{ backgroundColor: 'black' }} // Asegura que el fondo sea negro
         />
       </div>
 

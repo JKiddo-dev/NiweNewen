@@ -1,6 +1,12 @@
 import React from 'react';
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+  onClick?: () => void; // Hacer opcional onClick
+}
+
+const NavLink = ({ href, children, onClick }: NavLinkProps) => {
   const handleClick = (event: React.MouseEvent) => {
     event.preventDefault();
     const element = document.getElementById(href.substring(1));
@@ -15,6 +21,9 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
         top: offsetPosition,
         behavior: 'smooth'
       });
+    }
+    if (onClick) {
+      onClick(); // Llamar a onClick si está presente
     }
   };
 
