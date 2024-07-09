@@ -6,7 +6,7 @@ import Counter from './Counter';
 const statistics = [
   { id: 1, title: 'De adultos reportan sentirse incapaces de hacer cualquier cosa bajo estrés', value: 37, suffix: '%', description:'Descubre la experiencia de las terapias alternativas' },
   { id: 2, title: 'Se ven reducidas las hormonas relacionadas al estrés al entrar en contacto con la naturaleza', value: 30, suffix: '%', description:'¡Reconéctate con la naturaleza en nuestros bosques y cultivos!' },
-  { id: 3, title: 'De personas son afectadas por ansiedad alrededor del mundo', value: 300, suffix: ' Millones', description:'Encuentra un escape lleno de relajo en el domo' },
+  { id: 3, title: 'De personas son afectadas por ansiedad alrededor del mundo', value: 300, suffix: ' Millones', description:'Encuentra un escape lleno de relajo en el DOMO' },
 ];
 
 export const StatisticsSection: React.FC = () => {
