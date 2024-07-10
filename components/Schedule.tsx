@@ -37,7 +37,7 @@ const Schedule = () => {
   const [comments, setComments] = useState('');
 
   return (
-    <section id="schedule" className="my-20 bg-[#F3EDDD]">
+    <section id="schedule" className='relative flex flex-col justify-center items-center min-w-screen min-h-screen bg-[#F3EDDD]'>
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-3xl font-bold text-center mb-8 mt-12 text-[#002315]">AGENDA UNA CITA</h2>
         <p className="mb-4 text-center text-[#002315]">Utiliza el siguiente formulario para agendar una cita con nosotros.</p>

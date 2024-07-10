@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleNavigation = (href: string) => {
     const element = document.getElementById(href.substring(1));
     if (element) {
-      const offset = 80; // Ajusta este valor al tamaño de tu Navbar si es fijo
+      const offset = 80; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -29,17 +29,17 @@ const Navbar = () => {
         behavior: 'smooth'
       });
     }
-    setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
+    setMenuOpen(false); 
   };
 
   const scrollToTop = (event: React.MouseEvent) => {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    setMenuOpen(false); // Cierra el menú al hacer clic en el logo
+    setMenuOpen(false); 
   };
 
   if (!isClient) {
-    return null; // O un spinner de carga
+    return null; 
   }
 
   return (

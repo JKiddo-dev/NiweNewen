@@ -4,7 +4,9 @@ import ProductsSection from "@/components/ProductsSection";
 import { Services } from "@/components/Services";
 import { StatisticsSection } from "@/components/StatisticsSection";
 import ScrollToTopButton from "@/components/ScrolltoTopButton";
-import Schedule from "@/components/Schedule"; // Importar el nuevo componente
+import Schedule from "@/components/Schedule"; 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   return (
@@ -24,7 +26,7 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
-      <div id="schedule"> {/* Añadir la nueva sección */}
+      <div id="schedule"> 
         <Schedule />
       </div>
       <ScrollToTopButton />
