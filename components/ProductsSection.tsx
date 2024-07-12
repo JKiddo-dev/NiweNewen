@@ -24,7 +24,7 @@ export const ProductCard = ({ title, description, imageSrc }: ProductCardProps) 
 const products = [
   { id: 1, title: 'Canasta para Frutillas', description: 'Canasta construida a mano para recoger frutillas del cultivo.', imageSrc: '/Canasta.JPG' },
   { id: 2, title: 'Sillas Decorativas', description: 'Sillas de madera artesanal realizadas a mano.', imageSrc: '/Sillas.JPG' },
-  { id: 3, title: 'Gotitas', description: 'Gotas esenciales para la salud y el bienestar.', imageSrc: '/Gotas.JPG' },
+  { id: 3, title: 'Flores de Bach', description: 'Gotas esenciales para la salud y el bienestar.', imageSrc: '/Gotas.JPG' },
 ];
 
 export const ProductsSection = () => {
