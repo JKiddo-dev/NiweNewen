@@ -4,7 +4,8 @@ import ProductsSection from "@/components/ProductsSection";
 import { Services } from "@/components/Services";
 import { StatisticsSection } from "@/components/StatisticsSection";
 import ScrollToTopButton from "@/components/ScrolltoTopButton";
-import Schedule from "@/components/Schedule"; 
+import Schedule from "@/components/Schedule";
+import Contact from "@/components/Contact"; // Importa el componente Contact
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -26,8 +27,11 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
-      <div id="schedule"> 
+      <div id="schedule">
         <Schedule />
+      </div>
+      <div id="contact">
+        <Contact />
       </div>
       <ScrollToTopButton />
     </>

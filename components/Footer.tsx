@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaInstagram, FaFacebook, FaWhatsapp, FaCreditCard, FaMoneyBillAlt } from 'react-icons/fa';
-import Modal from './Modal'; 
+import { FaInstagram, FaFacebook, FaCreditCard, FaMoneyBillAlt } from 'react-icons/fa';
+import Modal from './Modal';
 
 const Footer = () => {
   const phoneNumber = "+56984497489";
@@ -12,111 +12,74 @@ const Footer = () => {
   const [showTermsOfService, setShowTermsOfService] = useState(false);
 
   return (
-    <footer id="contact" className="bg-[#F3EDDD] text-[#002315] py-8" style={{ fontFamily: 'Dancing Script' }}>
-      <div className="border-t-4 border-[#8C4C27] mb-8"></div>
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 md:flex-grow text-center md:text-left">
+    <footer id="contact" className="relative bg-[#F3EDDD] text-[#002315] py-8 px-4">
+      <div className="absolute top-0 left-0 w-full border-t-4 border-[#8C4C27]"></div>
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        <div className="flex flex-col items-center md:items-start md:flex-grow text-center md:text-left md:pl-8">
           <img src="/logo png.png" alt="Logo" className="h-32 mb-4 md:mb-0" />
         </div>
-        <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 md:flex-grow text-center md:text-left">
-          <p className="flex items-center mb-2">
-            <FaMapMarkerAlt className="mr-2" />
-            <a 
-              href="https://maps.app.goo.gl/xJniZ35Kd2nVMHG76" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:underline"
-            >
-              San Pedro de Melipilla
-            </a>
-          </p>
-          <p className="flex items-center mb-2">
-            <FaPhoneAlt className="mr-2" />
-            <a 
-              href={`tel:${phoneNumber}`} 
-              className="hover:underline"
-            >
-              +56 9 8449 7489
-            </a>
-          </p>
-          <p className="flex items-center mb-2">
-            <FaEnvelope className="mr-2" />
-            <a 
-              href="mailto:NiweNewen@gmail.com" 
-              className="hover:underline"
-            >
-              NiweNewen@gmail.com
-            </a>
-          </p>
-        </div>
-        <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 md:flex-grow text-center md:text-left">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left md:flex-grow">
+          <p className="mb-4 text-xl font-semibold">Síguenos en nuestras redes sociales:</p>
           <div className="flex flex-col md:flex-row items-center md:justify-start">
-            <a 
-              href={whatsappLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://instagram.com/domoniwenewen"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center hover:underline mb-2 md:mb-0 md:mr-4"
             >
-              <FaWhatsapp className="mr-2 text-green-500" />
-              WhatsApp
+              <FaInstagram className="mr-2 text-pink-500 text-2xl" />
+              <span className="text-xl">Instagram</span>
             </a>
             <span className="hidden md:inline mx-2 h-6 border-l border-[#8C4C27]"></span>
-            <a 
-              href="https://instagram.com/domoniwenewen" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center hover:underline mb-2 md:mb-0 md:mr-4"
-            >
-              <FaInstagram className="mr-2 text-pink-500" />
-              Instagram
-            </a>
-            <span className="hidden md:inline mx-2 h-6 border-l border-[#8C4C27]"></span>
-            <a 
-              href="https://facebook.com/DomoniweNewen" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://facebook.com/DomoniweNewen"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center hover:underline"
             >
-              <FaFacebook className="mr-2 text-blue-500" />
-              Facebook
+              <FaFacebook className="mr-2 text-blue-500 text-2xl" />
+              <span className="text-xl">Facebook</span>
             </a>
           </div>
-          <div className="flex flex-col md:flex-row items-center md:justify-start mt-4">
-            <p className="flex items-center mr-4">
-              <FaCreditCard className="mr-2" />
+        </div>
+        <div className="flex flex-col items-center md:items-start text-center md:text-left md:flex-grow">
+          <p className="mb-4 text-xl font-semibold">Métodos de pago:</p>
+          <div className="flex flex-col md:flex-row items-center md:justify-start">
+            <p className="flex items-center mr-4 text-xl">
+              <FaCreditCard className="mr-2 text-2xl" />
               Transferencia Bancaria
             </p>
-            <p className="flex items-center">
-              <FaMoneyBillAlt className="mr-2" />
+            <p className="flex items-center text-xl">
+              <FaMoneyBillAlt className="mr-2 text-2xl" />
               Efectivo
             </p>
           </div>
         </div>
       </div>
-      <div className="border-t border-[#8C4C27] mt-8 pt-4 text-center">
-        <p>&copy; 2024 Niwe Newen. Todos los derechos reservados.</p>
-        <button 
-          onClick={() => setShowPrivacyPolicy(true)} 
-          className="text-blue-400 hover:underline mx-2"
+      <div className="w-full border-t border-[#8C4C27] mt-8 pt-4 text-center">
+        <p className="text-xl">&copy; 2024 Niwe Newen. Todos los derechos reservados.</p>
+        <button
+          onClick={() => setShowPrivacyPolicy(true)}
+          className="text-blue-400 hover:underline mx-2 text-xl"
         >
           Política de Privacidad
         </button>
-        <button 
-          onClick={() => setShowTermsOfService(true)} 
-          className="text-blue-400 hover:underline mx-2"
+        <button
+          onClick={() => setShowTermsOfService(true)}
+          className="text-blue-400 hover:underline mx-2 text-xl"
         >
           Términos de Servicio
         </button>
       </div>
       {showPrivacyPolicy && (
-        <Modal 
-          show={showPrivacyPolicy} 
-          onClose={() => setShowPrivacyPolicy(false)} 
+        <Modal
+          show={showPrivacyPolicy}
+          onClose={() => setShowPrivacyPolicy(false)}
           title="Política de Privacidad"
         >
           <div className="p-6 bg-white rounded-lg max-h-96 overflow-y-auto">
             <h2 className="text-2xl font-semibold mb-4">Política de Privacidad</h2>
-            <p>
+            <p className="text-lg">
               <strong>Introducción</strong><br />
               Bienvenido a Domo Niwe Newen. Valoramos tu privacidad y estamos comprometidos con la protección de tus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos la información que nos proporcionas cuando visitas nuestra página web.
               <br /><br />
@@ -147,14 +110,14 @@ const Footer = () => {
         </Modal>
       )}
       {showTermsOfService && (
-        <Modal 
-          show={showTermsOfService} 
-          onClose={() => setShowTermsOfService(false)} 
+        <Modal
+          show={showTermsOfService}
+          onClose={() => setShowTermsOfService(false)}
           title="Términos de Servicio"
         >
           <div className="p-6 bg-white rounded-lg max-h-96 overflow-y-auto">
             <h2 className="text-2xl font-semibold mb-4">Términos de Servicio</h2>
-            <p>
+            <p className="text-lg">
               <strong>Introducción</strong><br />
               Estos Términos de Servicio rigen el uso del sitio web de Domo Niwe Newen. Al acceder y utilizar nuestro sitio, aceptas cumplir con estos términos.
               <br /><br />

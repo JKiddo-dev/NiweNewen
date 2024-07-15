@@ -1,33 +1,51 @@
+'use client';
+
 import React from 'react';
-import Image from 'next/image';
-
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  imageSrc: string;
-}
-
-export const ServiceCard = ({ title, description, imageSrc }: ServiceCardProps) => {
-  return (
-    <div className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group'>
-      <div className='relative mb-4 overflow-hidden transition-all duration-300 ease-in-out w-48 h-48 group-hover:w-80 group-hover:h-45'>
-        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' objectPosition='center' className='rounded-full group-hover:rounded-lg' />
-      </div>
-      <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
-      <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
-        {description}
-      </p>
-    </div>
-  );
-}
+import { ServiceCard } from './ServiceCard';
 
 const services = [
-  { id: 1, title: 'Estadía en Domo', description: 'Estancias para una inmersión completa en la naturaleza.', imageSrc: '/Interior.JPG' },
-  { id: 2, title: 'Meditación y Relajación', description: 'Diferentes técnicas para la relajación y el alivio del estrés.', imageSrc: '/Terapia.JPG' },
-  { id: 3, title: 'Terapias Alternativas', description: 'Reiki online, flores de Bach, tapping y matrix reimprinting.', imageSrc: '/Flores de Bach.JPG' },
-  { id: 4, title: 'Experiencia en GRANJA', description: 'Participa de la vida en el campo y la cosecha de productos frescos de temporada.', imageSrc: '/Cultivo.JPG' },
-  { id: 5, title: 'Clases de Pintura', description: 'Desata tu creatividad en un entorno natural e inspirador.', imageSrc: '/Pintura.JPG' },
-  { id: 6, title: 'Bosque nativo', description: 'Adéntrate en un bosque nativo  y descubre la belleza de los pinos y la flora autóctona.', imageSrc: '/Bosque.JPG' },
+  {
+    id: 1,
+    title: 'Estadía en Domo',
+    description: 'Estancias para una inmersión completa en la naturaleza.',
+    imageSrc: '/Interior.JPG',
+    images: ['/Interior.JPG', '/Domo2.jpg', '/Domo3.jpg'],
+  },
+  {
+    id: 2,
+    title: 'Meditación y Relajación',
+    description: 'Diferentes técnicas para la relajación y el alivio del estrés.',
+    imageSrc: '/Terapia.JPG',
+    images: ['/Terapia.JPG', '/medi2.JPG'],
+  },
+  {
+    id: 3,
+    title: 'Terapias Alternativas',
+    description: 'Reiki presecnial y online, terapia flores Dr. Bach, sesión de tapping o ETF y sesión de matrix reimprinting del DR. Karl Dawson.',
+    imageSrc: '/Flores de Bach.JPG',
+    images: ['/Flores de Bach.JPG', '/terapias2.JPG'],
+  },
+  {
+    id: 4,
+    title: 'Experiencia en GRANJA',
+    description: 'Participa de la vida en el campo y la cosecha de productos frescos de temporada.',
+    imageSrc: '/Cultivo.JPG',
+    images: ['/Cultivo.JPG', '/granja2.JPG', '/granja3.JPG','/granja4.JPG','/granja5.JPG','/granja6.JPG','/granja7.JPG'],
+  },
+  {
+    id: 5,
+    title: 'Clases de Pintura',
+    description: 'Desata tu creatividad en un entorno natural e inspirador.',
+    imageSrc: '/Pintura.JPG',
+    images: ['/Pintura.JPG', '/Pintura2.JPG', '/Pintura3.JPG'],
+  },
+  {
+    id: 6,
+    title: 'Bosque nativo',
+    description: 'Adéntrate en un bosque nativo y descubre la belleza de los pinos y la flora autóctona.',
+    imageSrc: '/Bosque.JPG',
+    images: ['/Bosque.JPG', '/bosque2.JPG', '/bosque3.JPG', '/bosque4.JPG', '/bosque5.JPG', '/bosque6.JPG'],
+  },
 ];
 
 export const Services = () => {
@@ -42,6 +60,7 @@ export const Services = () => {
               title={service.title}
               description={service.description}
               imageSrc={service.imageSrc}
+              images={service.images}
             />
           ))}
         </div>

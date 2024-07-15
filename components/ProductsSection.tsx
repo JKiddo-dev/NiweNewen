@@ -1,30 +1,37 @@
+'use client';
+
 import React from 'react';
-import Image from 'next/image';
-
-interface ProductCardProps {
-  title: string;
-  description: string;
-  imageSrc: string;
-}
-
-export const ProductCard = ({ title, description, imageSrc }: ProductCardProps) => {
-  return (
-    <div className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group'>
-      <div className='relative mb-4 overflow-hidden transition-all duration-300 ease-in-out w-48 h-48 group-hover:w-80 group-hover:h-45'>
-        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full group-hover:rounded-lg' />
-      </div>
-      <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
-      <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
-        {description}
-      </p>
-    </div>
-  );
-}
+import { ProductCard } from './ProductCard';
 
 const products = [
-  { id: 1, title: 'Canasta para Frutillas', description: 'Canasta construida a mano para recoger frutillas del cultivo.', imageSrc: '/Canasta.JPG' },
-  { id: 2, title: 'Sillas Decorativas', description: 'Sillas de madera artesanal realizadas a mano.', imageSrc: '/Sillas.JPG' },
-  { id: 3, title: 'Flores de Bach', description: 'Gotas esenciales para la salud y el bienestar.', imageSrc: '/Gotas.JPG' },
+  {
+    id: 1,
+    title: 'Canasta para Frutillas',
+    description: 'Canasta construida a mano para recoger frutillas del cultivo.',
+    imageSrc: '/Canasta.JPG',
+    images: ['/Canasta.JPG', '/canasta2.JPG', '/canasta3.JPG'],
+  },
+  {
+    id: 2,
+    title: 'Sillas Decorativas',
+    description: 'Sillas de madera artesanal realizadas a mano.',
+    imageSrc: '/Sillas.JPG',
+    images: ['/Sillas.JPG', '/Sillas2.JPG'],
+  },
+  {
+    id: 3,
+    title: 'Flores de Dr. Bach',
+    description: 'Gotas esenciales para la salud y el bienestar.',
+    imageSrc: '/Gotas.JPG',
+    images: ['/Gotas.JPG', '/gotas2.JPG'],
+  },
+  {
+    id: 3,
+    title: 'GiftCards',
+    description: 'Regala una GiftCard de nuestros servicios a la persona que quieras!.',
+    imageSrc: '/GIFTCARD.png.webp',
+    images: ['/GIFTCARD.png.webp', '/gc.JPG'],
+  },
 ];
 
 export const ProductsSection = () => {
@@ -39,6 +46,7 @@ export const ProductsSection = () => {
               title={product.title}
               description={product.description}
               imageSrc={product.imageSrc}
+              images={product.images}
             />
           ))}
         </div>

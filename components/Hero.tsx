@@ -25,13 +25,26 @@ const Hero = () => {
 
 
   const images = [
-    '/fondo domo.jpg',
-    '/about1.JPG',
-    '/about2.JPG',
-    '/about3.JPG',
-    '/about4.JPG',
-    '/about5.JPG',
-    '/Bosque.JPG',
+    '/hero.JPG',
+    '/hero2.JPG',
+    '/hero3.JPG',
+    '/hero4.JPG',
+    '/hero5.JPG',
+    '/hero6.JPG',
+    '/hero7.JPG',
+    '/hero8.JPG',
+    '/hero9.JPG',
+    '/hero10.JPG',
+    '/hero11.JPG',
+    '/hero12.JPG',
+    '/hero13.JPG',
+    '/hero14.JPG',
+    '/hero15.JPG',
+    '/hero16.JPG',
+    '/hero17.JPG',
+    '/hero18.JPG',
+    '/hero19.JPG',
+    '/hero20.jpg',
   ];
 
   return (
@@ -58,7 +71,7 @@ const Hero = () => {
       </div>
 
       <div className={`absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 lg:p-20 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'} bg-black bg-opacity-80`}>
-        <h1 className='text-4xl font-bold mb-4'>Bienvenido al Domo Niwe Newén</h1>
+        <h1 className='text-4xl font-bold mb-4'>Bienvenido al Domo Niwe Newen</h1>
         <p className='text-xl'>Relájese y conozca la experiencia de envolverse en la naturaleza</p>
       </div>
     </section>
