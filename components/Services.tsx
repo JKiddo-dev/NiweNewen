@@ -21,7 +21,7 @@ const services = [
   {
     id: 3,
     title: 'Terapias Alternativas',
-    description: 'Reiki presecnial y online, terapia flores Dr. Bach, sesión de tapping o ETF y sesión de matrix reimprinting del DR. Karl Dawson.',
+    description: 'Reiki presencial y a distancia, Terapia Floral Dr. Bach, Sesión de Tapping o ETF y Matrix del Dr. Karl Dawson.',
     imageSrc: '/Flores de Bach.JPG',
     images: ['/Flores de Bach.JPG', '/terapias2.JPG'],
   },
@@ -42,7 +42,7 @@ const services = [
   {
     id: 6,
     title: 'Bosque nativo',
-    description: 'Adéntrate en un bosque nativo y descubre la belleza de los pinos y la flora autóctona.',
+    description: 'Conecta la calma, en un bosque nativo y descubre la belleza natural.',
     imageSrc: '/Bosque.JPG',
     images: ['/Bosque.JPG', '/bosque2.JPG', '/bosque3.JPG', '/bosque4.JPG', '/bosque5.JPG', '/bosque6.JPG'],
   },

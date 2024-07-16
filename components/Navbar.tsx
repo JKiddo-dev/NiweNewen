@@ -43,9 +43,9 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="flex items-center justify-between w-full mx-auto max-w-[1920px] px-6 lg:px-20 3xl:px-0 z-30 py-5 bg-[#172601] fixed top-0">
+    <nav className="flex items-center justify-between w-full mx-auto max-w-[1920px] px-6 lg:px-20 3xl:px-0 z-30 py-5 bg-[#274001] fixed top-0">
       <div onClick={scrollToTop} className="cursor-pointer">
-        <img src="/logo png.png" alt="Logo" className="h-12" />
+        <img src="/logonavbar.png" alt="Logo" className="h-20" />
       </div>
       <ul className="lg:flex hidden h-full gap-12 text-white">
         {NAV_LINKS.map((link) => (

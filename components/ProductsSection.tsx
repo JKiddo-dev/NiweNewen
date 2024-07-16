@@ -20,10 +20,10 @@ const products = [
   },
   {
     id: 3,
-    title: 'Flores de Dr. Bach',
-    description: 'Gotas esenciales para la salud y el bienestar.',
-    imageSrc: '/Gotas.JPG',
-    images: ['/Gotas.JPG', '/gotas2.JPG'],
+    title: 'Marcadores de Libro',
+    description: 'Marcadores de libro artesanales, perfectos para personalizar y embellecer tus lecturas.',
+    imageSrc: '/marcadores.jpg',
+    images: ['/marcadores.jpg', '/marcadores.jpg'],
   },
   {
     id: 3,

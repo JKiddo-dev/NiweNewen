@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full border-t-4 border-[#8C4C27]"></div>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         <div className="flex flex-col items-center md:items-start md:flex-grow text-center md:text-left md:pl-8">
-          <img src="/logo png.png" alt="Logo" className="h-32 mb-4 md:mb-0" />
+          <img src="/logopng.png" alt="Logo" className="h-32 mb-4 md:mb-0" />
         </div>
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:flex-grow">
           <p className="mb-4 text-xl font-semibold">Síguenos en nuestras redes sociales:</p>
