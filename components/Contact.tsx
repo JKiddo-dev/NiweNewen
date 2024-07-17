@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from "next/image";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
@@ -26,7 +26,7 @@ const Contact = () => {
             ></iframe>
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center relative">
-            <div className="relative overflow-hidden rounded-lg w-full h-[500px]">
+            <div className="relative overflow-hidden rounded-lg w-full h-[300px] md:h-[500px]">
               <Image 
                 src="/mapa.png" 
                 alt="Mapa" 
