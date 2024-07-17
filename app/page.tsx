@@ -27,11 +27,11 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
-      <div id="schedule">
-        <Schedule />
-      </div>
       <div id="contact">
         <Contact />
+      </div>
+      <div id="schedule">
+        <Schedule />
       </div>
       <ScrollToTopButton />
     </>
