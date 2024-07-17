@@ -9,7 +9,7 @@ const services = [
     title: 'Estadía en Domo',
     description: 'Estancias para una inmersión completa en la naturaleza.',
     imageSrc: '/Interior.JPG',
-    images: ['/Interior.JPG', '/Domo2.jpg', '/Domo3.jpg'],
+    images: ['/Interior.JPG', '/Domo2.jpg', '/Domo3.jpg', '/BañoDomo.jpg'],
   },
   {
     id: 2,
