@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css"; 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { Main } from "next/document";
+
 
 export const metadata: Metadata = {
   title: "NiweNewen",

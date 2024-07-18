@@ -3,7 +3,7 @@ import React from 'react';
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
-  onClick?: () => void; // Hacer opcional onClick
+  onClick?: () => void; 
 }
 
 const NavLink = ({ href, children, onClick }: NavLinkProps) => {
@@ -11,7 +11,7 @@ const NavLink = ({ href, children, onClick }: NavLinkProps) => {
     event.preventDefault();
     const element = document.getElementById(href.substring(1));
     if (element) {
-      const offset = 80; // Ajusta este valor al tamaño de tu Navbar si es fijo
+      const offset = 80; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -23,7 +23,7 @@ const NavLink = ({ href, children, onClick }: NavLinkProps) => {
       });
     }
     if (onClick) {
-      onClick(); // Llamar a onClick si está presente
+      onClick(); 
     }
   };
 
