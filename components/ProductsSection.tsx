@@ -23,7 +23,7 @@ const products = [
     title: 'Marcadores de Libro',
     description: 'Marcadores de libro artesanales, perfectos para personalizar y embellecer tus lecturas.',
     imageSrc: '/marcadores.jpg',
-    images: ['/marcadores.jpg', '/marcadores.jpg'],
+    images: ['/marcadores.jpg', '/MarcaPaginas.jpg'],
   },
   {
     id: 4,
