@@ -23,7 +23,6 @@ const Hero = () => {
     prevArrow: <PrevArrow />,
   };
 
-
   const images = [
     '/hero.JPG',
     '/hero2.JPG',
@@ -71,8 +70,8 @@ const Hero = () => {
       </div>
 
       <div className={`absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 lg:p-20 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'} bg-black bg-opacity-80`}>
-        <h1 className='text-4xl font-bold mb-4'>Bienvenido al Domo Niwe Newen</h1>
-        <p className='text-xl'>Relájese y conozca la experiencia de envolverse en la naturaleza</p>
+        <h1 className='text-4xl font-bold mb-4 font-sans'>Bienvenido al Domo Niwe Newen</h1>
+        <p className='text-xl font-sans'>Relájese y conozca la experiencia de envolverse en la naturaleza</p>
       </div>
     </section>
   );
