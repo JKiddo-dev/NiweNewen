@@ -18,7 +18,6 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) 
       document.body.classList.remove('overflow-hidden');
     }
 
-    // Cleanup on unmount
     return () => {
       document.body.classList.remove('overflow-hidden');
     };
@@ -33,7 +32,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          onClick={onClose} // Close the modal when clicking on the backdrop
+          onClick={onClose}
         >
           <motion.div
             className="relative bg-transparent p-4 sm:p-6 rounded-lg w-full max-w-4xl mx-auto"
@@ -41,7 +40,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               className="absolute top-1 right-3 sm:top-2 sm:right-2 md:top-4 md:right-4 text-white text-2xl sm:text-3xl z-50"
