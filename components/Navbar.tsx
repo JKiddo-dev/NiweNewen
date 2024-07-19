@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between w-full mx-auto max-w-[1920px] px-6 lg:px-20 3xl:px-0 z-30 py-5 bg-[#274001] fixed top-0">
       <div onClick={scrollToTop} className="cursor-pointer">
-        <img src="/logonavbar.png" alt="Logo" className="h-20" />
+        <img src="/logonavbar.png" alt="Logo" className="h-20 w-auto" />
       </div>
       <ul className="lg:flex hidden h-full gap-12 text-white">
         {NAV_LINKS.map((link) => (
@@ -64,8 +64,8 @@ const Navbar = () => {
           onClick={() => handleNavigation('#schedule')}
         />
       </div>
-      <h1 className='lg:hidden md:text-4xl sm:text-3xl font-sans'>
-        Domo Niwe Newen
+      <h1 className='lg:hidden text-2xl font-sans text-white'>
+        Niwe Newen
       </h1>
       <div className="lg:hidden">
         <IoMenu size={50} color="white" className="cursor-pointer" onClick={() => setMenuOpen(true)} />

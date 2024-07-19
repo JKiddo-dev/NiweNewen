@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,6 +11,19 @@ interface ServiceModalProps {
 }
 
 const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) => {
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [show]);
+
   return (
     <AnimatePresence>
       {show && (
@@ -20,7 +33,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          onClick={onClose}
+          onClick={onClose} // Close the modal when clicking on the backdrop
         >
           <motion.div
             className="relative bg-transparent p-4 sm:p-6 rounded-lg w-full max-w-4xl mx-auto"
@@ -28,7 +41,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ show, onClose, children }) 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
           >
             <button
               className="absolute top-1 right-3 sm:top-2 sm:right-2 md:top-4 md:right-4 text-white text-2xl sm:text-3xl z-50"

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ProductCardCarousel from './ProductCardCarousel';
-import ServiceModal from './ServiceModal'; // Asegúrate de que esta importación sea correcta
+import ServiceModal from './ServiceModal'; 
 import ReactDOM from 'react-dom';
 
 interface ProductCardProps {
