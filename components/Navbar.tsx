@@ -64,7 +64,7 @@ const Navbar = () => {
           onClick={() => handleNavigation('#schedule')}
         />
       </div>
-      <h1 className='lg:hidden md:text-4xl text-3xl font-sans'>
+      <h1 className='lg:hidden text-4xl sm:text-2xl font-sans'>
         Domo Niwe Newen
       </h1>
       <div className="lg:hidden">
