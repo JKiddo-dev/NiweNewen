@@ -28,7 +28,7 @@ const NavLink = ({ href, children, onClick }: NavLinkProps) => {
   };
 
   return (
-    <a href={href} onClick={handleClick} className="text-xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#84BF04]">
+    <a href={href} onClick={handleClick} className="text-2xl flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:text-[#84BF04]">
       {children}
     </a>
   );

@@ -25,7 +25,7 @@ const Schedule = () => {
         </p>
 
         {isMobile ? (
-          <div className="flex justify-center items-center bg-white p-6 rounded-lg shadow-lg w-full">
+          <div className="flex justify-center items-center bg-[#F3EDDD] p-6 rounded-lg w-full">
             <a href="https://calendar.app.google/Z9S65dh4k9qP5VCE6" target="_blank" rel="noopener noreferrer" className="bg-[#274001] text-white py-2 px-4 rounded-lg">
               AGENDAR
             </a>
