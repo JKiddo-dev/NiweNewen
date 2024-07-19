@@ -1,8 +1,10 @@
-'use client';
+"use client";
 
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ProductCardCarousel from './ProductCardCarousel';
+import ServiceModal from './ServiceModal'; // Asegúrate de que esta importación sea correcta
+import ReactDOM from 'react-dom';
 
 interface ProductCardProps {
   title: string;
@@ -12,33 +14,34 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({ title, description, imageSrc, images }: ProductCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [showCarousel, setShowCarousel] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleOpenCarousel = () => {
+    setShowCarousel(true);
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const handleCloseCarousel = () => {
+    setShowCarousel(false);
   };
 
   return (
     <div
-      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group'
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer'
+      onClick={handleOpenCarousel}
     >
-      <div className={`relative mb-4 overflow-hidden transition-all duration-300 ease-in-out ${isHovered ? 'w-80 h-45 group-hover:rounded-lg' : 'w-48 h-48 rounded-full'}`}>
-        {isHovered ? (
-          <ProductCardCarousel images={images} isHovered={isHovered} />
-        ) : (
-          <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full group-hover:rounded-lg' />
-        )}
+      <div className='relative mb-4 overflow-hidden w-48 h-48 rounded-full'>
+        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' />
       </div>
       <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
       <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
         {description}
       </p>
+      {showCarousel && ReactDOM.createPortal(
+        <ServiceModal show={showCarousel} onClose={handleCloseCarousel}>
+          <ProductCardCarousel images={images} />
+        </ServiceModal>,
+        document.body
+      )}
     </div>
   );
-}
+};

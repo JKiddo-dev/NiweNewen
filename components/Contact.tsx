@@ -12,7 +12,7 @@ const Contact = () => {
     <section id="contact" className="bg-[#F3EDDD] text-[#002315] py-16 px-4">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8 text-[#002315]">CONTACTO</h2>
-        <p className="mb-4 text-center text-xl">Estamos ubicados en San Pedro de Melipilla, Región Metropolitana.</p>
+        <p className="mb-4 text-center text-2xl">Estamos ubicados en San Pedro de Melipilla, Región Metropolitana.</p>
         <div className="flex flex-col md:flex-row justify-center items-start md:items-center space-y-8 md:space-y-0 md:space-x-8">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <iframe
@@ -37,23 +37,23 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <p className="mt-8 text-center text-xl">¿Tienes consultas o necesitas más detalles? ¡Ponte en contacto con nosotros!</p>
+        <p className="mt-8 text-center text-2xl">¿Tienes consultas o necesitas más detalles? ¡Ponte en contacto con nosotros!</p>
         <div className="flex flex-col md:flex-row justify-center items-center mt-4 space-y-4 md:space-y-0 md:space-x-8">
           <div className="flex items-center space-x-2">
             <FaPhoneAlt />
-            <a href={`tel:${phoneNumber}`} className="text-[#002315] font-medium text-xl hover:text-[#78288c] transition-colors duration-300">
+            <a href={`tel:${phoneNumber}`} className="text-[#002315] font-medium text-2xl hover:text-[#78288c] transition-colors duration-300">
               +56 9 8449 7489
             </a>
           </div>
           <div className="flex items-center space-x-2">
             <FaWhatsapp />
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#002315] font-medium text-xl hover:text-[#78288c] transition-colors duration-300">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#002315] font-medium text-2xl hover:text-[#78288c] transition-colors duration-300">
               WhatsApp
             </a>
           </div>
           <div className="flex items-center space-x-2">
             <FaEnvelope />
-            <a href={`mailto:${email}`} className="text-[#002315] font-medium text-xl hover:text-[#78288c] transition-colors duration-300">
+            <a href={`mailto:${email}`} className="text-[#002315] font-medium text-2xl hover:text-[#78288c] transition-colors duration-300">
               NiweNewen@gmail.com
             </a>
           </div>

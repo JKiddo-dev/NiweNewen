@@ -13,8 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },  // Los valores deben ser strings
+          '100%': { opacity: '1' }, // Los valores deben ser strings
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 2s ease-in-out',
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

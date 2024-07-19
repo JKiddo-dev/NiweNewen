@@ -64,6 +64,9 @@ const Navbar = () => {
           onClick={() => handleNavigation('#schedule')}
         />
       </div>
+      <h1 className='lg:hidden md:text-4xl sm:text-3xl font-sans'>
+        Domo Niwe Newen
+      </h1>
       <div className="lg:hidden">
         <IoMenu size={50} color="white" className="cursor-pointer" onClick={() => setMenuOpen(true)} />
         <div className={`fixed inset-0 z-40 flex items-center justify-center bg-[#172601] bg-opacity-80 backdrop-blur-sm transition-all duration-300 transform ${menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
@@ -78,7 +81,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="mt-4">
+            <div className="flex justify-center mt-4">
               <Button
                 type="button"
                 title="Agendar"

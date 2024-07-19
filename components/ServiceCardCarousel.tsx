@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
 import React from 'react';
-import Image from 'next/image';
 import Slider, { CustomArrowProps } from 'react-slick';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 interface ServiceCardCarouselProps {
   images: string[];
-  isHovered: boolean;
 }
 
 const PrevArrow = (props: CustomArrowProps) => (
@@ -24,14 +22,14 @@ const NextArrow = (props: CustomArrowProps) => (
   </div>
 );
 
-const ServiceCardCarousel = ({ images, isHovered }: ServiceCardCarouselProps) => {
+const ServiceCardCarousel: React.FC<ServiceCardCarouselProps> = ({ images }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: isHovered,
+    autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
     nextArrow: <NextArrow />,
@@ -42,8 +40,8 @@ const ServiceCardCarousel = ({ images, isHovered }: ServiceCardCarouselProps) =>
     <div className="w-full h-full">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index} className="relative w-full h-48">
-            <Image src={src} alt={`Image ${index}`} layout="fill" objectFit="cover" className="rounded-lg" />
+          <div key={index} className="relative w-full h-[80vh]">
+            <img src={src} alt={`Slide ${index}`} className="object-contain w-full h-full rounded-lg" />
           </div>
         ))}
       </Slider>

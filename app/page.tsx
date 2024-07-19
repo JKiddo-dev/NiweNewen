@@ -6,6 +6,7 @@ import { StatisticsSection } from "@/components/StatisticsSection";
 import ScrollToTopButton from "@/components/ScrolltoTopButton";
 import Schedule from "@/components/Schedule";
 import Contact from "@/components/Contact"; 
+import ScrollButton from "@/components/ScrollButton"; // Importa el nuevo componente
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <div id="hero">
         <Hero />
+        <ScrollButton /> {/* Añade el botón de scroll en el encabezado */}
       </div>
       <div id="services">
         <Services />
