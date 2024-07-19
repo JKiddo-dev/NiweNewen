@@ -1,4 +1,3 @@
-// src/constants/index.ts
 
 export const NAV_LINKS = [
   { key: 'services', label: 'Servicios', href: '#services' },
