@@ -26,11 +26,10 @@ export const ProductCard = ({ title, description, imageSrc, images }: ProductCar
 
   return (
     <div
-      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer'
-      onClick={handleOpenCarousel}
+      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer'      
     >
       <div className='relative mb-4 overflow-hidden w-48 h-48 rounded-full'>
-        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' />
+        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' onClick={handleOpenCarousel}/>
       </div>
       <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
       <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
