@@ -48,9 +48,11 @@ const Hero = () => {
 
   return (
     <section
-      className="relative flex flex-col justify-center items-center min-w-screen h-[50vh] lg:h-screen bg-[#F3EDDD]"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    id="hero"
+    className="relative flex flex-col justify-center items-center min-w-screen h-[50vh] lg:h-screen bg-[#F3EDDD]"
+    style={{ marginTop: '120px' }} 
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative w-full h-full flex-1 min-h-[50vh] lg:min-h-[80vh]">
         <Slider {...settings} className="w-full h-full">

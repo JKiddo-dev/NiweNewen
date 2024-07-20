@@ -52,3 +52,7 @@ body {
 .overflow-hidden {
   overflow: hidden;
 }
+
+#hero {
+  transition: margin-top 0.3s ease-in-out;
+}
