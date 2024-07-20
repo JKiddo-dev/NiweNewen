@@ -31,6 +31,8 @@ export default function Home() {
 
   return (
     <>
+    <div>
+
       <div id="hero">
         <Hero />
       </div>
@@ -55,9 +57,10 @@ export default function Home() {
       <div className='hidden md:block'>
       <ScrollToTopButton />
       </div>
+    </div>
       
       {/* Add the button here, visible only on small devices */}
-      <div className="fixed bottom-4 right-4 block sm:hidden">
+      <div className="fixed bottom-4 right-4 block sm:hidden z-50">
         <Button
           type="button"
           title="Agendar"
