@@ -26,21 +26,39 @@ export const ServiceCard = ({ title, description, imageSrc, images }: ServiceCar
 
   return (
     <div
-      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer'
+      className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer h-full"
     >
-      <div className='relative mb-4 overflow-hidden w-48 h-48 rounded-full'>
-        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' onClick={handleOpenModal}/>
+      {/* Ensures consistent image sizing */}
+      <div className="relative mb-4 overflow-hidden rounded-full w-32 h-32">
+        <Image
+          src={imageSrc}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-full"
+          onClick={handleOpenModal}
+        />
       </div>
-      <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
-      <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
+
+      {/* Fixed title styling */}
+      <h2 className="text-2xl text-[#002315] font-bold mb-2">{title}</h2>
+
+      {/* Description is fixed-height */}
+      <p
+        className="text-[#78288c] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 overflow-hidden h-10"
+        style={{ lineHeight: '1rem' }} // Adjust line height to match text
+      >
         {description}
       </p>
-      {showModal && ReactDOM.createPortal(
-        <ServiceModal show={showModal} onClose={handleCloseModal}>
-          <ServiceCardCarousel images={images} />
-        </ServiceModal>,
-        document.body
-      )}
+
+      {/* Modal logic */}
+      {showModal &&
+        ReactDOM.createPortal(
+          <ServiceModal show={showModal} onClose={handleCloseModal}>
+            <ServiceCardCarousel images={images} />
+          </ServiceModal>,
+          document.body
+        )}
     </div>
   );
 };

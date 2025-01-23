@@ -46,27 +46,47 @@ const services = [
     imageSrc: '/Bosque.JPG',
     images: ['/Bosque.JPG', '/bosque2.JPG', '/bosque3.JPG', '/bosque4.JPG', '/bosque5.JPG', '/bosque6.JPG'],
   },
+  {
+    id: 7,
+    title: 'Tina Caliente ',
+    description: 'Hot Tub caliente en hormigón',
+    imageSrc: '/hotTub.jpg',
+    images: ['/hotTub.jpg', '/bosque2.JPG', '/bosque3.JPG', '/bosque4.JPG', '/bosque5.JPG', '/bosque6.JPG'],
+  },
 ];
 
 export const Services = () => {
   return (
-    <div id='services-section' className='py-16 bg-[#F2EBDF]'>
-      <div className='container mx-auto'>
-        <h2 className='text-3xl font-bold text-center mb-8 text-[#002315]'>NUESTROS SERVICIOS</h2>
-        <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-          {services.map((service) => (
-            <ServiceCard
+    <div id="services-section" className="py-16 bg-[#F2EBDF]">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#002315]">
+          NUESTROS SERVICIOS
+        </h2>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <div
               key={service.id}
-              title={service.title}
-              description={service.description}
-              imageSrc={service.imageSrc}
-              images={service.images}
-            />
+              className={`${
+                services.length % 3 === 1 && index === services.length - 1
+                  ? "sm:col-span-2 lg:col-span-3 flex justify-center"
+                  : ""
+              }`}
+            >
+              <div className="h-full w-full max-w-[500px] mx-auto">
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  imageSrc={service.imageSrc}
+                  images={service.images}
+                />
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Services;
+
