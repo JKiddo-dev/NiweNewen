@@ -51,7 +51,7 @@ const services = [
     title: 'Tina Caliente ',
     description: 'Hot Tub caliente en hormigón',
     imageSrc: '/hotTub.jpg',
-    images: ['/hotTub.jpg', '/bosque2.JPG', '/bosque3.JPG', '/bosque4.JPG', '/bosque5.JPG', '/bosque6.JPG'],
+    images: ['/hotTub.jpg'],
   },
 ];
 
