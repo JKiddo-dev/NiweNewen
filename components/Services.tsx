@@ -9,7 +9,7 @@ const services = [
     title: 'Estadía en Domo',
     description: 'Estancias para una inmersión completa en la naturaleza.',
     imageSrc: '/Interior.JPG',
-    images: ['/Interior.JPG', '/Domo2.jpg', '/Domo3.jpg', '/BañoDomo.jpg'],
+    images: ['/Interior.JPG', '/Domo2.jpg', '/Domo3.jpg', '/BañoDomo.jpg', '/domo4.jpg', '/domo5.jpg'],
   },
   {
     id: 2,
@@ -48,10 +48,17 @@ const services = [
   },
   {
     id: 7,
-    title: 'Tina Caliente ',
-    description: 'Hot Tub caliente en hormigón',
+    title: 'Mini Piscina Temperada',
+    description: 'Piscina temperada en hormigón',
     imageSrc: '/hotTub.jpg',
-    images: ['/hotTub.jpg'],
+    images: ['/hotTub.jpg', '/tub2.jpg', '/tub3.jpg', '/tub4.jpg'],
+  },
+  {
+    id: 8,
+    title: 'Jornada de Capacitación',
+    description: 'Capacitación en Cuidado Colectivo, Autocuidado, y Buen Trato',
+    imageSrc: '/capacitacion.jpg',
+    images: ['/capacitacion.jpg'],
   },
 ];
 
