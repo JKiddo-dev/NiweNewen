@@ -49,14 +49,14 @@ const services = [
   {
     id: 7,
     title: 'Mini Piscina Temperada',
-    description: 'Piscina temperada en hormigón',
+    description: 'Piscina temperada en hormigón para una relajación profunda.',
     imageSrc: '/hotTub.jpg',
     images: ['/hotTub.jpg', '/tub2.jpg', '/tub3.jpg', '/tub4.jpg'],
   },
   {
     id: 8,
     title: 'Jornada de Capacitación',
-    description: 'Capacitación en Cuidado Colectivo, Autocuidado, y Buen Trato',
+    description: 'Capacitación en Cuidado Colectivo, Autocuidado, y Buen Trato.',
     imageSrc: '/capacitacion.jpg',
     images: ['/capacitacion.jpg'],
   },
@@ -64,29 +64,25 @@ const services = [
 
 export const Services = () => {
   return (
-    <div id="services-section" className="py-16 bg-[#F2EBDF]">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#002315]">
-          NUESTROS SERVICIOS
-        </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={`${
-                services.length % 3 === 1 && index === services.length - 1
-                  ? "sm:col-span-2 lg:col-span-3 flex justify-center"
-                  : ""
-              }`}
-            >
-              <div className="h-full w-full max-w-[500px] mx-auto">
-                <ServiceCard
-                  title={service.title}
-                  description={service.description}
-                  imageSrc={service.imageSrc}
-                  images={service.images}
-                />
-              </div>
+    <div id="services-section" className="py-20 bg-background">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="text-lg text-textMuted max-w-2xl mx-auto font-sans">
+            Explora las diferentes experiencias que Niwe Newen tiene para ofrecerte.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {services.map((service) => (
+            <div key={service.id} className="h-full w-full mx-auto">
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                imageSrc={service.imageSrc}
+                images={service.images}
+              />
             </div>
           ))}
         </div>

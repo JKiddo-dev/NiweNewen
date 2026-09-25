@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ServiceCardCarousel from './ServiceCardCarousel';
 import ServiceModal from './ServiceModal';
 import ReactDOM from 'react-dom';
+import { motion } from 'framer-motion';
 
 interface ServiceCardProps {
   title: string;
@@ -16,49 +17,42 @@ interface ServiceCardProps {
 export const ServiceCard = ({ title, description, imageSrc, images }: ServiceCardProps) => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleOpenModal = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
   return (
-    <div
-      className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer h-full"
-    >
-      {/* Ensures consistent image sizing */}
-      <div className="relative mb-4 overflow-hidden rounded-full w-32 h-32">
-        <Image
-          src={imageSrc}
-          alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
-          onClick={handleOpenModal}
-        />
-      </div>
-
-      {/* Fixed title styling */}
-      <h2 className="text-2xl text-[#002315] font-bold mb-2">{title}</h2>
-
-      {/* Description is fixed-height */}
-      <p
-        className="text-[#78288c] transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 overflow-hidden h-10"
-        style={{ lineHeight: '1rem' }} // Adjust line height to match text
+    <>
+      <motion.div
+        whileHover={{ y: -10 }}
+        onClick={() => setShowModal(true)}
+        className="bg-white shadow-lg hover:shadow-2xl rounded-2xl overflow-hidden flex flex-col items-center text-center transition-all duration-300 cursor-pointer h-full border border-gray-100"
       >
-        {description}
-      </p>
+        <div className="relative w-full h-56 overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+            className="transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
 
-      {/* Modal logic */}
+        <div className="p-6 flex flex-col flex-grow w-full">
+          <h2 className="text-xl md:text-2xl text-primary font-serif font-bold mb-3">{title}</h2>
+          <p className="text-gray-600 font-sans leading-relaxed flex-grow">
+            {description}
+          </p>
+          <div className="mt-4 inline-block text-secondary font-semibold text-sm tracking-wider uppercase">
+            Ver más →
+          </div>
+        </div>
+      </motion.div>
+
       {showModal &&
         ReactDOM.createPortal(
-          <ServiceModal show={showModal} onClose={handleCloseModal}>
+          <ServiceModal show={showModal} onClose={() => setShowModal(false)}>
             <ServiceCardCarousel images={images} />
           </ServiceModal>,
           document.body
         )}
-    </div>
+    </>
   );
 };

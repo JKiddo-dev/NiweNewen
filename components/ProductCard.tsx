@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ProductCardCarousel from './ProductCardCarousel';
 import ServiceModal from './ServiceModal'; 
 import ReactDOM from 'react-dom';
+import { motion } from 'framer-motion';
 
 interface ProductCardProps {
   title: string;
@@ -16,31 +17,40 @@ interface ProductCardProps {
 export const ProductCard = ({ title, description, imageSrc, images }: ProductCardProps) => {
   const [showCarousel, setShowCarousel] = useState(false);
 
-  const handleOpenCarousel = () => {
-    setShowCarousel(true);
-  };
-
-  const handleCloseCarousel = () => {
-    setShowCarousel(false);
-  };
-
   return (
-    <div
-      className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center transition-transform duration-300 ease-in-out transform hover:scale-105 group cursor-pointer'      
-    >
-      <div className='relative mb-4 overflow-hidden w-48 h-48 rounded-full'>
-        <Image src={imageSrc} alt={title} layout='fill' objectFit='cover' className='rounded-full' onClick={handleOpenCarousel}/>
-      </div>
-      <h2 className='text-2xl text-[#002315] font-bold mb-2'>{title}</h2>
-      <p className='text-[#78288c] transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
-        {description}
-      </p>
+    <>
+      <motion.div
+        whileHover={{ y: -10 }}
+        onClick={() => setShowCarousel(true)}
+        className='bg-white shadow-lg hover:shadow-2xl rounded-2xl overflow-hidden flex flex-col items-center text-center transition-all duration-300 cursor-pointer border border-gray-100 h-full'
+      >
+        <div className='relative w-full h-56 overflow-hidden'>
+          <Image 
+            src={imageSrc} 
+            alt={title} 
+            fill 
+            style={{ objectFit: 'cover' }} 
+            className='transition-transform duration-500 hover:scale-110'
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+        <div className="p-6 flex flex-col flex-grow w-full">
+          <h2 className='text-xl md:text-2xl text-primary font-serif font-bold mb-3'>{title}</h2>
+          <p className='text-gray-600 font-sans leading-relaxed flex-grow'>
+            {description}
+          </p>
+          <div className="mt-4 inline-block text-secondary font-semibold text-sm tracking-wider uppercase">
+            Ver más →
+          </div>
+        </div>
+      </motion.div>
+
       {showCarousel && ReactDOM.createPortal(
-        <ServiceModal show={showCarousel} onClose={handleCloseCarousel}>
+        <ServiceModal show={showCarousel} onClose={() => setShowCarousel(false)}>
           <ProductCardCarousel images={images} />
         </ServiceModal>,
         document.body
       )}
-    </div>
+    </>
   );
 };

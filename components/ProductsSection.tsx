@@ -28,7 +28,7 @@ const products = [
   {
     id: 4,
     title: 'GiftCards',
-    description: 'Regala una GiftCard de nuestros servicios a la persona que quieras!.',
+    description: 'Regala una GiftCard de nuestros servicios a la persona que quieras!',
     imageSrc: '/GIFTCARD.png.webp',
     images: ['/GIFTCARD.png.webp', '/gc.JPG'],
   },
@@ -36,18 +36,24 @@ const products = [
 
 export const ProductsSection = () => {
   return (
-    <section id='products-section' className='py-16 bg-[#F2EBDF]'>
-      <div className='container mx-auto'>
-        <h2 className='text-3xl font-bold text-center mb-8 text-[#002315]'>NUESTROS PRODUCTOS</h2>
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
+    <section id='products-section' className='py-20 bg-background'>
+      <div className='container mx-auto px-6 max-w-7xl'>
+        <div className="text-center mb-16">
+          <h2 className='text-4xl md:text-5xl font-serif font-bold text-primary mb-4'>Nuestros Productos</h2>
+          <p className="text-lg text-textMuted max-w-2xl mx-auto font-sans">
+            Lleva un pedacito de Niwe Newen a tu hogar con nuestros productos artesanales.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
           {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              title={product.title}
-              description={product.description}
-              imageSrc={product.imageSrc}
-              images={product.images}
-            />
+            <div key={product.id} className="h-full w-full mx-auto">
+              <ProductCard
+                title={product.title}
+                description={product.description}
+                imageSrc={product.imageSrc}
+                images={product.images}
+              />
+            </div>
           ))}
         </div>
       </div>
